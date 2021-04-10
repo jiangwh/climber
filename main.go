@@ -4,8 +4,6 @@ import (
 	"climber/getHots"
 	"climber/webPublish"
 	"fmt"
-	//"github.com/jinzhu/gorm"
-	//_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"time"
 )
 
@@ -26,27 +24,3 @@ func main() {
 	webPublish.Publish()
 
 }
-
-//
-//type Product struct {
-//	gorm.Model //嵌入常用字段
-//	Code  string
-//	Price uint
-//}
-
-//func main() {
-//	db, err := gorm.Open("sqlite3", "lite.db")
-//	if err != nil {
-//		panic(err)
-//	}
-//	//关闭数据库连接
-//	defer db.Close()
-//
-//	//创建表
-//	db.AutoMigrate(&Product{})
-//
-//	product := &Product{Code: "No.002", Price: 520}
-//	fmt.Println(db.NewRecord(product)) //output: true
-//	db.Create(product)
-//	fmt.Println(db.NewRecord(product)) //output: false
-//}
